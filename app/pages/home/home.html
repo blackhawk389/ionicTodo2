@@ -1,0 +1,24 @@
+<ion-navbar *navbar >    
+    <button  (click)= "addtask()">Show Prompt</button>
+  <ion-title>
+    TODO APP
+  </ion-title>
+  
+</ion-navbar>
+
+<ion-content>
+ <ion-list>
+    
+        <ion-item-sliding *ngFor = "#todo of arr">
+            <ion-item>
+                {{todo.task}}
+                </ion-item>
+                <ion-item-options>
+                    <button (click)="update(todo.task)">Update</button>
+                        <button (click)= "delete(todo.task)">Delete</button>
+                </ion-item-options>
+        </ion-item-sliding>    
+    
+    
+  </ion-list>
+</ion-content>
